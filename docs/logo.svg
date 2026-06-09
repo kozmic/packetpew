@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 260" width="820" height="260" role="img" aria-label="Packet Pew">
+  <defs>
+    <radialGradient id="bg" cx="28%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#0B1A2E"/>
+      <stop offset="60%" stop-color="#060D18"/>
+      <stop offset="100%" stop-color="#03060C"/>
+    </radialGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5CFBE0"/>
+      <stop offset="100%" stop-color="#1FB6A0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- backdrop -->
+  <rect x="0" y="0" width="820" height="260" rx="26" fill="url(#bg)"/>
+  <rect x="1" y="1" width="818" height="258" rx="25" fill="none" stroke="#16314A" stroke-width="2"/>
+
+  <!-- globe -->
+  <g transform="translate(150,130)" stroke="#2FA7C2" fill="none" stroke-width="1.6" opacity="0.9">
+    <circle r="92" stroke="#1E5A7A" stroke-width="2"/>
+    <circle r="92" stroke="url(#teal)" stroke-width="2" opacity="0.5" filter="url(#softglow)"/>
+    <!-- meridians -->
+    <line x1="0" y1="-92" x2="0" y2="92"/>
+    <ellipse rx="34" ry="92"/>
+    <ellipse rx="66" ry="92"/>
+    <!-- parallels -->
+    <line x1="-92" y1="0" x2="92" y2="0"/>
+    <ellipse rx="92" ry="34"/>
+    <ellipse rx="92" ry="66"/>
+  </g>
+
+  <!-- land dots -->
+  <g fill="#35E0C0" filter="url(#glow)">
+    <circle cx="118" cy="96" r="2.4"/>
+    <circle cx="138" cy="86" r="2.2"/>
+    <circle cx="165" cy="104" r="2.6"/>
+    <circle cx="190" cy="150" r="2.2"/>
+    <circle cx="120" cy="160" r="2.4"/>
+    <circle cx="150" cy="182" r="2.0"/>
+    <circle cx="100" cy="128" r="2.2"/>
+  </g>
+
+  <!-- pew arcs -->
+  <g fill="none" stroke-linecap="round" filter="url(#glow)">
+    <path d="M186 92 C 320 -2, 470 18, 560 70" stroke="#36F1CD" stroke-width="3"/>
+    <path d="M196 168 C 330 220, 470 196, 540 150" stroke="#FF2D6B" stroke-width="3" opacity="0.95"/>
+  </g>
+  <!-- missiles / impacts -->
+  <g filter="url(#softglow)">
+    <circle cx="560" cy="70" r="6" fill="#9CFFF0"/>
+    <circle cx="540" cy="150" r="5" fill="#FF7FA8"/>
+  </g>
+
+  <!-- wordmark -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-weight="800">
+    <text x="300" y="120" font-size="60" letter-spacing="4" fill="#EAF6FF">PACKET</text>
+    <text x="300" y="178" font-size="60" letter-spacing="10" fill="url(#teal)" filter="url(#glow)">PEW</text>
+    <!-- crosshair accent -->
+    <g transform="translate(470,158)" stroke="#36F1CD" stroke-width="2.4" fill="none" filter="url(#glow)">
+      <circle r="16"/>
+      <line x1="-24" y1="0" x2="-18" y2="0"/>
+      <line x1="18" y1="0" x2="24" y2="0"/>
+      <line x1="0" y1="-24" x2="0" y2="-18"/>
+      <line x1="0" y1="18" x2="0" y2="24"/>
+      <circle r="3" fill="#36F1CD" stroke="none"/>
+    </g>
+  </g>
+
+  <text x="300" y="212" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+        font-size="14" letter-spacing="2.5" fill="#8AA0B6">LIVE NETWORK TRAFFIC · PEW-PEW MAP</text>
+</svg>
