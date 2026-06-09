@@ -25,6 +25,12 @@ machine's network traffic and renders it in two modes:
 Switch between modes in the top bar. The HUD shows packet rate, throughput,
 protocol breakdown, and the most active remote peers (with country flags).
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="Packet Pew — Globe view with live capture" width="900">
+  <br>
+  <sub>Live capture on <code>en0</code>: outbound (teal) and inbound (pink) missiles between geolocated IPs, with top talkers and protocol breakdown.</sub>
+</p>
+
 ## Requirements
 
 - macOS 14+ and the Xcode 16 / Swift 6.0 toolchain (tested with Swift 6.2 / Xcode 26).
